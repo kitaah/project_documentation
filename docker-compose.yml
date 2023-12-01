@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  mkdocs:
+    container_name: project_documentation
+    build:
+      context: .
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./docs:/app/docs

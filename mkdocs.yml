@@ -1,0 +1,42 @@
+# Project information
+site_name: Project documentation
+site_description: "The documentation for Project (RE)SOURCES RELATIONNELLES pertains to the development of a web and mobile application.."
+site_author: "Kitaah"
+site_url: "https://kitaah.github.io/project_documentation/"
+
+# Configuration
+docs_dir: "docs"
+theme:
+  name: "material"
+  language: "en"
+  font:
+    text: Inter
+  palette:
+    primary: "indigo"
+    accent: "indigo"
+  features:
+    - tabs
+    - search.suggest
+    - navigation.instant
+    - navigation.instant.prefetch
+    - navigation.tabs
+    - navigation.tabs.sticky
+
+# Extensions
+markdown_extensions:
+  - admonition
+  - codehilite
+  - footnotes
+  - toc:
+      permalink: true
+      separator: "_"
+
+plugins:
+  - search:
+      separator: '[\s\-\.]+'
+      lang:
+        - en
+
+# Page tree
+nav:
+  - "Home": "index.md"
