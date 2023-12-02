@@ -2,7 +2,6 @@
 site_name: Project documentation
 site_description: "The documentation for Project (RE)SOURCES RELATIONNELLES pertains to the development of a web and mobile application.."
 site_author: "Kitaah"
-site_url: "https://kitaah.github.io/project_documentation/"
 
 repo_name: "project_documentation"
 repo_url: "https://github.com/kitaah/project_documentation"
