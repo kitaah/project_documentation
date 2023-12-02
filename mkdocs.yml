@@ -21,12 +21,20 @@ theme:
     - navigation.instant.prefetch
     - navigation.tabs
     - navigation.tabs.sticky
+    - content.code.copy
 
 # Extensions
 markdown_extensions:
   - admonition
   - codehilite
   - footnotes
+  - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - def_list
+  - pymdownx.tasklist:
+      custom_checkbox: true
   - toc:
       permalink: true
       separator: "_"
@@ -40,3 +48,12 @@ plugins:
 # Page tree
 nav:
   - "Home": "index.md"
+  - "DDEV":
+    - "General": "DDEV/general.md"
+    - "Installation": "DDEV/installation.md"
+    - "Laravel quickstart": "DDEV/laravel-quickstart.md"
+  - "Laravel":
+      - "General": "Laravel/general.md"
+  - "PHP":
+      - "PHP 8.3": "PHP/php8.3.md"
+      - "PHP Documentor": "PHP/phpdocumentor.md"
