@@ -23,5 +23,5 @@ This documentation is a comprehensive guide outlining various informatio and tec
 - pip install mkdocs-material-extensions
 
 ### **Building and deploying**
-- bulding site: mkdocs building
+- bulding site: mkdocs build
 - GitHub pages deployment: mkdocs gh-deploy
