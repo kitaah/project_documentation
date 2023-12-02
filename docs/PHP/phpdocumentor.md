@@ -1,6 +1,6 @@
 # PHP Documentor
 
-## **Official website** [:fontawesome-solid-link:](https://www.phpdoc.org/){:target="_blank"}
+## **Official website documentation** [:fontawesome-solid-link:](https://docs.phpdoc.org/3.0/){:target="_blank"}
 
 ## **Installation and usage**
 
