@@ -4,6 +4,9 @@ site_description: "The documentation for Project (RE)SOURCES RELATIONNELLES pert
 site_author: "Kitaah"
 site_url: "https://kitaah.github.io/project_documentation/"
 
+repo_name: "project_documentation"
+repo_url: "https://github.com/kitaah/project_documentation"
+
 # Configuration
 docs_dir: "docs"
 theme:
