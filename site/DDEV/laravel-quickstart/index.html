@@ -885,9 +885,9 @@ ddev<span class="w"> </span>config<span class="w"> </span>--database<span class=
 ddev<span class="w"> </span>composer<span class="w"> </span>create<span class="w"> </span>--prefer-dist<span class="w"> </span>--no-install<span class="w"> </span>--no-scripts<span class="w"> </span>laravel/laravel<span class="w"> </span>-y
 ddev<span class="w"> </span>composer<span class="w"> </span>install
 ddev<span class="w"> </span><span class="nb">exec</span><span class="w"> </span><span class="s2">&quot;php artisan key:generate&quot;</span>
-ddev<span class="w"> </span>get<span class="w"> </span>ddev/ddev-adminer
-ddev<span class="w"> </span>auth<span class="w"> </span>ssh
+ddev<span class="w"> </span>get<span class="w"> </span>ddev/ddev-adminer<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>ddev<span class="w"> </span>get<span class="w"> </span>ddev/ddev-memcached
 ddev<span class="w"> </span>restart
+ddev<span class="w"> </span>auth<span class="w"> </span>ssh
 ddev<span class="w"> </span>launch
 </code></pre></div>
 

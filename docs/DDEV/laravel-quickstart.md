@@ -17,13 +17,13 @@ ddev config --database=postgres:16
 ddev composer create --prefer-dist --no-install --no-scripts laravel/laravel -y
 ddev composer install
 ddev exec "php artisan key:generate"
-ddev get ddev/ddev-adminer
-ddev auth ssh
+ddev get ddev/ddev-adminer && ddev get ddev/ddev-memcached
 ddev restart
+ddev auth ssh
 ddev launch
 ```
 ### **Composer.json**
-You need to modify the PHP version in the composer.json file (default one is 8.1):
+You need to modify the PHP version in the **composer.json** file (default version is 8.1):
 ```sh
     "require": {
         "php": "^8.3",
