@@ -255,6 +255,24 @@
   
 
       
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../Vite/configuration/" class="md-tabs__link">
+          
+  
+  Vite
+
+        </a>
+      </li>
+    
+  
+
+      
     </ul>
   </div>
 </nav>
@@ -482,9 +500,18 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#installing_a_laravel_project_with_composer" class="md-nav__link">
+  <a href="#setup" class="md-nav__link">
     <span class="md-ellipsis">
-      Installing a laravel project with composer
+      Setup
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#composerjson" class="md-nav__link">
+    <span class="md-ellipsis">
+      Composer.json
     </span>
   </a>
   
@@ -563,6 +590,27 @@
   
   <span class="md-ellipsis">
     General
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Laravel/packages/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Packages
   </span>
   
 
@@ -668,6 +716,74 @@
   
 
     
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Vite
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Vite
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Vite/configuration/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Configuration
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -714,9 +830,18 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#installing_a_laravel_project_with_composer" class="md-nav__link">
+  <a href="#setup" class="md-nav__link">
     <span class="md-ellipsis">
-      Installing a laravel project with composer
+      Setup
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#composerjson" class="md-nav__link">
+    <span class="md-ellipsis">
+      Composer.json
     </span>
   </a>
   
@@ -752,7 +877,7 @@
 <div class="codehilite"><pre><span></span><code>ssh-keygen<span class="w"> </span>-t<span class="w"> </span>ed25519<span class="w"> </span>-C<span class="w"> </span><span class="s2">&quot;your_email@example.com&quot;</span>
 </code></pre></div>
 
-<h3 id="installing_a_laravel_project_with_composer"><strong>Installing a laravel project with composer</strong><a class="headerlink" href="#installing_a_laravel_project_with_composer" title="Permanent link">&para;</a></h3>
+<h3 id="setup"><strong>Setup</strong><a class="headerlink" href="#setup" title="Permanent link">&para;</a></h3>
 <div class="codehilite"><pre><span></span><code>mkdir<span class="w"> </span>my-laravel-app
 <span class="nb">cd</span><span class="w"> </span>my-laravel-app
 ddev<span class="w"> </span>config<span class="w"> </span>--project-type<span class="o">=</span>laravel<span class="w"> </span>--docroot<span class="o">=</span>public<span class="w"> </span>--create-docroot<span class="w"> </span>--php-version<span class="o">=</span><span class="m">8</span>.3
@@ -761,8 +886,15 @@ ddev<span class="w"> </span>composer<span class="w"> </span>create<span class="w
 ddev<span class="w"> </span>composer<span class="w"> </span>install
 ddev<span class="w"> </span><span class="nb">exec</span><span class="w"> </span><span class="s2">&quot;php artisan key:generate&quot;</span>
 ddev<span class="w"> </span>get<span class="w"> </span>ddev/ddev-adminer
-ddv<span class="w"> </span>ssh<span class="w"> </span>auth
+ddev<span class="w"> </span>auth<span class="w"> </span>ssh
+ddev<span class="w"> </span>restart
 ddev<span class="w"> </span>launch
+</code></pre></div>
+
+<h3 id="composerjson"><strong>Composer.json</strong><a class="headerlink" href="#composerjson" title="Permanent link">&para;</a></h3>
+<p>You need to modify the PHP version in the composer.json file (default one is 8.1):</p>
+<div class="codehilite"><pre><span></span><code><span class="w">    </span><span class="s2">&quot;require&quot;</span>:<span class="w"> </span><span class="o">{</span>
+<span class="w">        </span><span class="s2">&quot;php&quot;</span>:<span class="w"> </span><span class="s2">&quot;^8.3&quot;</span>,
 </code></pre></div>
 
 

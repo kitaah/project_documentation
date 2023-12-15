@@ -7,7 +7,7 @@ build: ## Build all containers
 rebuild: ## Rebuilds and starts all containers
 	@docker compose up --build
 up: ##  Builds, (re)creates, and starts containers
-	@docker-compose up
+	@docker compose up
 start: ## Start all containers
 	@docker compose start
 fresh: stop destroy build start ## Destroy & recreate all containers

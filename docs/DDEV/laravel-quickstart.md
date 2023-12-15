@@ -8,7 +8,7 @@ Use your GitHub email address:
 ssh-keygen -t ed25519 -C "your_email@example.com"
 ```
 
-### **Installing a laravel project with composer**
+### **Setup**
 ```sh
 mkdir my-laravel-app
 cd my-laravel-app
@@ -18,6 +18,13 @@ ddev composer create --prefer-dist --no-install --no-scripts laravel/laravel -y
 ddev composer install
 ddev exec "php artisan key:generate"
 ddev get ddev/ddev-adminer
-ddv ssh auth
+ddev auth ssh
+ddev restart
 ddev launch
+```
+### **Composer.json**
+You need to modify the PHP version in the composer.json file (default one is 8.1):
+```sh
+    "require": {
+        "php": "^8.3",
 ```

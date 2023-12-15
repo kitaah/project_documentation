@@ -12,7 +12,7 @@ chmod +x phpDocumentor.phar
 sudo mv phpDocumentor.phar /usr/local/bin/phpDocumentor
 ```
 ### **Running PHPDocumentor**
-- Run PHPDocumentor in your folder:  
+- Run PHPDocumentor in your project folder:  
 ```sh
 phpDocumentor run -d . -t docs/api --ignore=vendor
 ```

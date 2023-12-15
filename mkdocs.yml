@@ -56,6 +56,9 @@ nav:
     - "Laravel quickstart": "DDEV/laravel-quickstart.md"
   - "Laravel":
       - "General": "Laravel/general.md"
+      - "Packages": "Laravel/packages.md"
   - "PHP":
       - "PHP 8.3": "PHP/php8.3.md"
       - "PHP Documentor": "PHP/phpdocumentor.md"
+  - "Vite":
+      - "Configuration": "Vite/configuration.md"
