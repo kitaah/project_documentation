@@ -54,11 +54,19 @@ nav:
     - "General": "DDEV/general.md"
     - "Installation": "DDEV/installation.md"
     - "Laravel quickstart": "DDEV/laravel-quickstart.md"
+  - "Filament":
+    - "General": "Filament/general.md"
+    - "Resources": "Filament/resources.md"
+    - "Widgets": "Filament/widgets.md"
   - "Laravel":
       - "General": "Laravel/general.md"
+      - "Models": "Laravel/models.md"
       - "Packages": "Laravel/packages.md"
+      - "Policies": "Laravel/policies.md"
   - "PHP":
       - "PHP 8.3": "PHP/php8.3.md"
       - "PHP Documentor": "PHP/phpdocumentor.md"
+  - "NPM":
+      - "Packages": "NPM/packages.md"
   - "Vite":
       - "Configuration": "Vite/configuration.md"

@@ -2,7 +2,7 @@
 
 ## **Correcting npm run dev not working**
 
-In the **.ddev** folder, you need to add this in the **config.yaml** file:
+Adding in the **config.yaml** file:
 ```sh
 web_extra_exposed_ports:
   - name: vite
@@ -11,17 +11,25 @@ web_extra_exposed_ports:
     https_port: 5173
 ```
 
-In the **vite.config.js** file, you need to add this:
+Adding in the **vite.config.js**:
 ```sh
 import { defineConfig } from 'vite';
-import laravel from 'laravel-vite-plugin';
+import laravel, { refreshPaths } from 'laravel-vite-plugin';
 import react from '@vitejs/plugin-react';
 
 export default defineConfig({
     plugins: [
         laravel({
-            input: 'resources/js/app.jsx',
-            refresh: true,
+            input: ['resources/css/app.css', 'resources/js/app.jsx', 'resources/js/app.js'],
+            refresh: [
+                ...refreshPaths,
+                'app/Filament/**',
+                'app/Forms/Components/**',
+                'app/Livewire/**',
+                'app/Infolists/Components/**',
+                'app/Providers/Filament/**',
+                'app/Tables/Columns/**',
+            ],
         }),
         react(),
     ],
@@ -34,5 +42,18 @@ export default defineConfig({
             host: `${process.env.DDEV_HOSTNAME}`,
         }
     },
-});
+})
+```
+
+## **Post CSS Config**
+
+Adding in the **postcss.config.js** file:
+```sh
+export default {
+    plugins: {
+        'tailwindcss/nesting': 'postcss-nesting',
+        tailwindcss: {},
+        autoprefixer: {},
+    },
+}
 ```
